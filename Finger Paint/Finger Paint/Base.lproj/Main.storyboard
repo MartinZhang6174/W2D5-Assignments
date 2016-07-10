@@ -1,25 +1,126 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNe-CK-wkk" customClass="DrawingView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BUx-uR-dqC">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="533" width="84" height="44"/>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="BUx-uR-dqC"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="BUx-uR-dqC"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OYL-SI-2yf">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="237" id="gha-0i-bfY"/>
+                                    <constraint firstAttribute="height" constant="30" id="kMD-kH-XzV"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gha-0i-bfY"/>
+                                        <exclude reference="kMD-kH-XzV"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="gha-0i-bfY"/>
+                                        <include reference="kMD-kH-XzV"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="colorChangingSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="hqV-do-13j"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GNe-CK-wkk" secondAttribute="bottom" constant="70" id="6N3-rW-HbE"/>
+                            <constraint firstItem="GNe-CK-wkk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="IQl-Y0-vew"/>
+                            <constraint firstItem="OYL-SI-2yf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q02-s7-gOb"/>
+                            <constraint firstItem="OYL-SI-2yf" firstAttribute="top" secondItem="GNe-CK-wkk" secondAttribute="bottom" constant="8" id="ZlO-i5-0Wj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GNe-CK-wkk" secondAttribute="trailing" constant="-20" id="b5r-DX-SSc"/>
+                            <constraint firstItem="GNe-CK-wkk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="l4w-4d-HcW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="GNe-CK-wkk"/>
+                                <exclude reference="OYL-SI-2yf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="IQl-Y0-vew"/>
+                                <exclude reference="b5r-DX-SSc"/>
+                                <exclude reference="l4w-4d-HcW"/>
+                                <exclude reference="Q02-s7-gOb"/>
+                                <exclude reference="ZlO-i5-0Wj"/>
+                                <exclude reference="6N3-rW-HbE"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="GNe-CK-wkk"/>
+                                <include reference="OYL-SI-2yf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="IQl-Y0-vew"/>
+                                <include reference="b5r-DX-SSc"/>
+                                <include reference="l4w-4d-HcW"/>
+                                <include reference="Q02-s7-gOb"/>
+                                <include reference="ZlO-i5-0Wj"/>
+                                <include reference="6N3-rW-HbE"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0u5-Id-Z2d" appends="YES" id="QKm-t1-KqJ"/>
+                        </connections>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="colorDisplayingView" destination="BUx-uR-dqC" id="iEg-yv-tId"/>
+                        <outlet property="drawingView" destination="GNe-CK-wkk" id="Bff-84-738"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="0u5-Id-Z2d">
+                    <connections>
+                        <action selector="panGestureInitiated:" destination="BYZ-38-t0r" id="F2a-L4-f4P"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="324.75" y="328.5"/>
         </scene>
     </scenes>
 </document>

@@ -13,6 +13,7 @@
 		9CA3836D1D3040CE00BF259A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA3836B1D3040CE00BF259A /* Main.storyboard */; };
 		9CA3836F1D3040CE00BF259A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA3836E1D3040CE00BF259A /* Assets.xcassets */; };
 		9CA383721D3040CE00BF259A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA383701D3040CE00BF259A /* LaunchScreen.storyboard */; };
+		9CA383841D3068D000BF259A /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA383831D3068D000BF259A /* DrawingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		9CA3836E1D3040CE00BF259A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CA383711D3040CE00BF259A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CA383731D3040CE00BF259A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CA383821D3068D000BF259A /* DrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
+		9CA383831D3068D000BF259A /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				9CA383661D3040CE00BF259A /* AppDelegate.m */,
 				9CA383681D3040CE00BF259A /* ViewController.h */,
 				9CA383691D3040CE00BF259A /* ViewController.m */,
+				9CA383821D3068D000BF259A /* DrawingView.h */,
+				9CA383831D3068D000BF259A /* DrawingView.m */,
 				9CA3836B1D3040CE00BF259A /* Main.storyboard */,
 				9CA3836E1D3040CE00BF259A /* Assets.xcassets */,
 				9CA383701D3040CE00BF259A /* LaunchScreen.storyboard */,
@@ -153,6 +158,7 @@
 				9CA3836A1D3040CE00BF259A /* ViewController.m in Sources */,
 				9CA383671D3040CE00BF259A /* AppDelegate.m in Sources */,
 				9CA383641D3040CE00BF259A /* main.m in Sources */,
+				9CA383841D3068D000BF259A /* DrawingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
